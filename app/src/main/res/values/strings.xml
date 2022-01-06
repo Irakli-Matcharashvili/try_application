@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">Try_Application</string>
+    <string name="app_my_name">first button</string>
+    <string name="app_try_button">TRY APPLICATION</string>
+    <string name="app_try_minus_button">-</string>
+    <string name="app_try_plus_button">+</string>
+    <string name="app_try_zero_text">0</string>
+    <string name="app_my_string">my firs text</string>
+</resources>
