@@ -3,4 +3,5 @@
     <dimen name="dimen_p_20">20dp</dimen>
 
     <dimen name="dimen_sp_20">20sp</dimen>
+    <dimen name="dimen_sp_60">60sp</dimen>
 </resources>

@@ -13,15 +13,13 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="center"
-        android:text="@string/app_try_button"
-        android:visibility="gone"
-        tools:visibility="visible"/>
+        android:text="@string/app_try_button"/>
 
     <Button
         android:id="@+id/appTryMinusBottom"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginEnd="20dp"
+        android:layout_marginEnd="@dimen/dimen_p_20"
         android:text="@string/app_try_minus_button"
         android:textSize="@dimen/dimen_sp_20"
         android:visibility="gone"/>
@@ -31,7 +29,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/app_try_zero_text"
-        android:textSize="60sp"
+        android:textSize="@dimen/dimen_sp_60"
         android:gravity="center"
         android:visibility="gone"/>
 
@@ -41,6 +39,6 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="@dimen/dimen_p_20"
         android:text="@string/app_try_plus_button"
-        android:textSize="20sp"
+        android:textSize="@dimen/dimen_sp_20"
         android:visibility="gone"/>
 </LinearLayout>

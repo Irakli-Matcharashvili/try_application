@@ -1,26 +1,37 @@
 package com.example.try_application
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
-import android.widget.TextView
+import androidx.appcompat.app.AppCompatActivity
+import androidx.core.view.isGone
+import com.example.try_application.databinding.ActivityMainFragmentBinding
 
 class MainActivity : AppCompatActivity() {
+
+    private lateinit var binding: ActivityMainFragmentBinding
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.try_main_fragment)
-        val minusButton: Button = findViewById(R.id.appTryMinusBottom)
-        val plusButton: Button = findViewById(R.id.appTryPlusBottom)
-        val zeroTextView: TextView = findViewById(R.id.appTryZeroText)
-        minusButton.setOnClickListener {
-            var number = zeroTextView.text.toString().toInt()
-            number--
-            zeroTextView.text = "$number"
-        }
-        plusButton.setOnClickListener {
-            var number = zeroTextView.text.toString().toInt()
-            number++
-            zeroTextView.text = "$number"
+        binding = ActivityMainFragmentBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        initNextStep()
+    }
+
+    private fun initNextStep() {
+        with(binding) {
+            tryApplicationButton.setOnClickListener {
+                it.isGone = true
+                appTryMinusBottom.isGone = false
+                appTryPlusBottom.isGone = false
+                appTryZeroText.isGone = false
+            }
+
+            appTryMinusBottom.setOnClickListener {
+                appTryZeroText.text = (appTryZeroText.text.toString().toInt() - 1).toString()
+            }
+
+            appTryPlusBottom.setOnClickListener {
+                appTryZeroText.text = (appTryZeroText.text.toString().toInt() + 1).toString()
+            }
         }
     }
 }
