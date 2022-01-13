@@ -10,6 +10,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.Try_Application">
         <activity
+            android:name=".resultActiviti"
+            android:exported="false" />
+        <activity
             android:name=".MainActivity"
             android:exported="true">
             <intent-filter>
